@@ -88,3 +88,36 @@ fs.open("abc.txt",
                   }
                  )
 //Ans= file discriptor:3
+
+// 6)stat:
+var fs= require('fs')
+fs.stat("abc.txt",(err,stat)=>{
+    if(err){
+        console.log(err);
+        return;
+    }
+  console.log(stat)
+  // saved!!
+  }
+ )
+
+ //Ans=Stats {
+//   dev: 3225346784,
+//   mode: 33206,
+//   nlink: 1,
+//   uid: 0,
+//   gid: 0,
+//   rdev: 0,
+//   blksize: 4096,
+//   ino: 6755399441114243,
+//   size: 52,
+//   blocks: 0,
+//   atimeMs: 1663655991747.8218,
+//   mtimeMs: 1663606001716.0227,
+//   ctimeMs: 1663606001716.0227,
+//   birthtimeMs: 1663596504165.105,
+//   atime: 2022-09-20T06:39:51.748Z,
+//   mtime: 2022-09-19T16:46:41.716Z,
+//   ctime: 2022-09-19T16:46:41.716Z,
+//   birthtime: 2022-09-19T14:08:24.165Z
+// }
